@@ -1,0 +1,64 @@
+.tariff__counter-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 47px;border: 1 px solid blue;
+}
+
+.tariff__counter-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    padding: 21px;
+    border-radius: 50%;
+    width: 74px;
+    height: 74px;
+}
+
+.tariff__counter__num {
+    margin-bottom: 6px;
+    color: #424242;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.tariff__counter__name {
+    color: #424242;
+    font-family: Gilroy;
+    font-size: 27.573px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    
+}
+.tariff__counter-circle{
+    width: 70px;
+}
+
+.circle{
+--offset: -10px;
+position: absolute;
+top: var(--offset);
+right: var(--offset);
+bottom:  var(--offset);
+left:  var(--offset);
+transform: rotate(-90deg);
+}
+
+.segment{
+fill: transparent;
+stroke: url(#gradient);
+stroke-width: 1px;
+stroke-dasharray: 60 60;
+stroke-linecap: round;
+transform: scale(4.7);
+transform-origin: center;
+transition: stroke-dasharray 1s linear;
+}
