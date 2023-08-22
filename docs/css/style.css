@@ -1007,6 +1007,23 @@ a :visited {
   padding: 3rem 2.1875rem;
   margin-bottom: 4rem;
 }
+/* Пример анимации цвета fill */
+@keyframes colorAnimation {
+    0% {
+        fill: #10A37F;
+    }
+    50% {
+        fill: #FF0000;
+    }
+    100% {
+        fill: #10A37F;
+    }
+}
+
+.circle .segment {
+    animation: colorAnimation 2s infinite;
+}
+
 .info__list {
   display: -webkit-box;
   display: -ms-flexbox;
