@@ -60,7 +60,7 @@ if (savedTime) {
   savedTime = parseInt(savedTime, 10);
 } else {
   // Если нет сохраненного времени, устанавливаем новое время
-  savedTime = Date.now() + 1000 * 60 * 60 * 24 * 1;
+  savedTime = Date.now() + 1000 * 60 * 60 * 24 * 7;
   localStorage.setItem('finishTime', savedTime);
 }
 
