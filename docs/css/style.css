@@ -1274,6 +1274,23 @@ a :visited {
           transform: rotate(-8deg);
   width: 4.6875rem;
 }
+/* Пример анимации цвета fill */
+@keyframes colorAnimation {
+    0% {
+        fill: #10A37F;
+    }
+    50% {
+        fill: #FF0000;
+    }
+    100% {
+        fill: #10A37F;
+    }
+}
+
+.circle .segment {
+    animation: colorAnimation 2s infinite;
+}
+
 .tariff__item-newprice {
   color: #262830;
   text-align: center;
