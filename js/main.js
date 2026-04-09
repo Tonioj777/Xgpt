@@ -50,20 +50,26 @@ window.addEventListener('DOMContentLoaded', function () {
 
 // ==================================Tabs=========================================
 
-document.addEventListener("DOMContentLoaded", function () {
-  const tabs = document.querySelectorAll(".seo__tabs-item");
-  const contentItems = document.querySelectorAll(".seo__content-item");
+const tabs = document.querySelectorAll('.seo__tabs-item');
+const contents = document.querySelectorAll('.tab__content');
 
-  tabs.forEach(tab => {
-    tab.addEventListener("click", function (event) {
-      event.preventDefault(); // Отмена дефолтного поведения ссылки
-      tabs.forEach(t => t.classList.remove("seo__tabs-item--active"));
-      tab.classList.add("seo__tabs-item--active");
+tabs.forEach(tab => {
+  tab.addEventListener('click', (e) => {
+    e.preventDefault(); // убираем прыжок по якорю
 
-      const tabId = tab.getAttribute("href");
-      contentItems.forEach(item => item.classList.remove("tab__content--active"));
-      document.querySelector(tabId).classList.add("tab__content--active");
+    const targetId = tab.getAttribute('href').replace('#', '');
+
+    // активный таб
+    tabs.forEach(t => t.classList.remove('seo__tabs-item--active'));
+    tab.classList.add('seo__tabs-item--active');
+
+    // контент
+    contents.forEach(content => {
+      content.classList.remove('tab__content--active');
     });
+
+    const activeContent = document.getElementById(targetId);
+    activeContent.classList.add('tab__content--active');
   });
 });
 
