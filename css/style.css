@@ -2018,9 +2018,10 @@ a :visited {
   line-height: 1.375rem;
 }
 .seo__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .seo__content-img {
   display: block;
@@ -2028,17 +2029,26 @@ a :visited {
   max-height: 34.375rem;
   max-width: 47.8125rem;
 }
-.seo__content-img img {
+.seo__content-img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-height: 34.375rem;
+  object-fit: contain; /* или cover если нужно обрезать */
+  display: block;
 }
 .seo .tab__content {
-  display: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
 }
 .seo .tab__content.tab__content--active {
-  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  position: relative;
 }
 
 .demo__body-block {
